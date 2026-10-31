@@ -2,6 +2,8 @@
 
 When a page with `ssr = false` is loaded directly, the `enter` navigation passed to `afterNavigate` has `from: { route: { id: null }, url: null, … }` instead of `from: null`. Code that follows the types, such as `navigation.from?.url.pathname`, throws. Server-rendered pages pass `from: null`.
 
+Reported in [sveltejs/kit#17586](https://github.com/sveltejs/kit/issues/17586).
+
 ## By hand
 
 [Open in StackBlitz](https://stackblitz.com/github/stickerdaniel/sveltekit-afternavigate-from-repro), or run `npm install && npm run dev`.
